@@ -54,12 +54,39 @@ namespace CentralitaHerencia
 
         private float CalcularGanancia(TipoLlamada tipo)
         {
-            float ganancia = 0;
+            
+            float gananciaLocal = 0;
+            float gananciaProvincial = 0;
+            Local auxLocal;
+            Provincial auxProvincial;
+
+            foreach (Llamada item in this.Llamadas)
+            {
+                if(item.GetType() == typeof(Local))
+                {
+                    auxLocal = (Local)item;
+                    gananciaLocal += auxLocal.CostoLlamada;
+                }
+                else if (item.GetType() == typeof(Provincial))
+                {
+                    auxProvincial = (Provincial)item;
+                    gananciaProvincial += auxProvincial.CostoLlamada;
+                }
+            }
+
+            if (tipo == TipoLlamada.Local)
+                return gananciaLocal;
+            else if (tipo == TipoLlamada.Provincial)
+                return gananciaProvincial;
+            return gananciaProvincial + gananciaLocal;
+            
+
 
             /*
              * FALLA AL ENCONTRAR UNA LLAMADA LOCAL CUANDO ES PROVINCIAL Y VICEVERSA.
              * LLAMADA DEBERÍA TENER LA PROPIEDAD CostoLlamada PARA QUE FUNCIONE.
-             * 
+             *
+            float ganancia = 0; 
             if ((tipo == TipoLlamada.Local) || (tipo == TipoLlamada.Todas))
             {
                 foreach (Local item in this.Llamadas)
@@ -74,9 +101,10 @@ namespace CentralitaHerencia
                     ganancia += item.CostoLlamada;
                 }
             }
-            */
-
+            
+            
             return ganancia;
+            */
         }
 
         public void OrdenerLlamadas()
