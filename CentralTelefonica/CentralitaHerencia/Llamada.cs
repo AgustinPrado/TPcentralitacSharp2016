@@ -47,7 +47,16 @@ namespace CentralitaHerencia
 
         public void Mostrar()
         {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("La llamada desde "
+                + this.NroOrigen
+                + " a " 
+                + this.NroDestino 
+                + " duró "
+                + this.Duracion
+                + " segundos.");
 
+            Console.WriteLine(sb);
         }
     }
 }

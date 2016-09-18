@@ -51,9 +51,21 @@ namespace CentralitaHerencia
             return this.Duracion * franja;
         }
 
-        public void Mostrar()
+        new public void Mostrar()
         {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("La llamada desde "
+                + this.NroOrigen
+                + " a "
+                + this.NroDestino
+                + " duró "
+                + this.Duracion
+                + " segundos perteneciendo a la franja \""
+                + this._franjaHoraria.ToString()
+                + "\" y costó $"
+                + this.CostoLlamada);
 
+            Console.WriteLine(sb);
         }
     }
 }

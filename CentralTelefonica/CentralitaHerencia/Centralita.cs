@@ -114,7 +114,32 @@ namespace CentralitaHerencia
 
         public void Mostrar()
         {
+            Local auxLocal;
+            Provincial auxProvincial;
 
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("Razón social: " + this._razonSocial);
+            sb.AppendLine("Ganancia total: $" + this.GananciaTotal);
+            sb.AppendLine("Ganancia por llamadas locales: $" + this.GananciaPorLocal);
+            sb.AppendLine("Ganancia por llamadas provinciales: $" + this.GananciaPorProvincial);
+            sb.AppendLine("Detalle de llamdas:");
+
+            Console.WriteLine(sb);
+
+            foreach (Llamada item in this.Llamadas)
+            {
+                if (item.GetType() == typeof(Local))
+                {
+                    auxLocal = (Local)item;
+                    auxLocal.Mostrar();
+                }
+                else if (item.GetType() == typeof(Provincial))
+                {
+                    auxProvincial = (Provincial)item;
+                    auxProvincial.Mostrar();
+                }
+            }
+     
         }
     }
 }
