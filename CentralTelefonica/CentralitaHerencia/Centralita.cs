@@ -128,12 +128,12 @@ namespace CentralitaHerencia
 
             foreach (Llamada item in this.Llamadas)
             {
-                if (item.GetType() == typeof(Local))
+                if (item is Local)
                 {
                     auxLocal = (Local)item;
                     auxLocal.Mostrar();
                 }
-                else if (item.GetType() == typeof(Provincial))
+                else if (item is Provincial)
                 {
                     auxProvincial = (Provincial)item;
                     auxProvincial.Mostrar();
