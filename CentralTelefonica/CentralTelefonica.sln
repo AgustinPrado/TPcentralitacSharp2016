@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CentralitaHerencia", "CentralitaHerencia\CentralitaHerencia.csproj", "{D1F24677-05A0-4B8A-8DDD-F4AE90E91B1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CentralitaPolimorfismo", "CentralitaPolimorfismo\CentralitaPolimorfismo.csproj", "{085674C2-F74F-4B32-94A1-BF4486ECCA59}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +15,10 @@ Global
 		{D1F24677-05A0-4B8A-8DDD-F4AE90E91B1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1F24677-05A0-4B8A-8DDD-F4AE90E91B1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1F24677-05A0-4B8A-8DDD-F4AE90E91B1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{085674C2-F74F-4B32-94A1-BF4486ECCA59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{085674C2-F74F-4B32-94A1-BF4486ECCA59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{085674C2-F74F-4B32-94A1-BF4486ECCA59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{085674C2-F74F-4B32-94A1-BF4486ECCA59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
